@@ -9,4 +9,5 @@ urlpatterns = [
     path("profiles/", include("profiles.urls", namespace="profiles")),
     path("admin/", admin.site.urls),
     path('test500', core_view.test_500),
+    path("sentry-error/", core_view.test_error),
 ]
