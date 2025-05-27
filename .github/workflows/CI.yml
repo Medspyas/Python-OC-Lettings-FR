@@ -32,6 +32,9 @@ jobs:
           flake8 . 
 
       - name: Run tests with pytest
+        env:
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
+          SENTRY_KEY: ${{ secrets.SENTRY_KEY }}
         run: |
           echo "Running tests ..."
           pytest
