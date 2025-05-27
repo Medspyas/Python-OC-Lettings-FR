@@ -46,3 +46,11 @@ jobs:
             --build-arg SECRET_KEY=${{ secrets.SECRET_KEY }} \
             --build-arg SENTRY_KEY=${{ secrets.SENTRY_KEY }} \
             -t my-django-app .
+
+      - name: Run collectstatic in container
+        run: |
+          docker run --rm
+            -e SECRET_KEY=${{ secrets.SECRET_KEY }} \
+            -v ${{ github.workspace }}/static:/app/static \
+            my-django-app \
+            python manage.py collectstatic --noinput
