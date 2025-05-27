@@ -49,7 +49,7 @@ jobs:
 
       - name: Run collectstatic in container
         run: |
-          docker run --rm
+          docker run --rm \
             -e SECRET_KEY="${{ secrets.SECRET_KEY }}" \
             -v ${{ github.workspace }}/static:/app/static \
             my-django-app \
