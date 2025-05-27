@@ -12,6 +12,10 @@ COPY . /app/
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel
 RUN pip install --no-cache-dir -r requirements.txt
 
+ARG SECRET_KEY
+ENV SECRET_KEY=${SECRET_KEY}
+ARG SENTRY_KEY
+ENV SENTRY_KEY=${SENTRY_KEY}
 
 RUN python manage.py collectstatic --noinput
 

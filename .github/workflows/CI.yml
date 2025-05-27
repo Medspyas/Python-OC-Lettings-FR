@@ -42,4 +42,7 @@ jobs:
       - name: Build Docker 
         run: |
           echo "Building Docker image..."
-          docker build -t my-django-app .
+          docker build \
+            --build-arg SECRET_KEY=${{secrets.SECRET_KEY}}
+            --build-arg SENTRY_KEY=${{secrets.SENTRY_KEY}}
+            -t my-django-app .
