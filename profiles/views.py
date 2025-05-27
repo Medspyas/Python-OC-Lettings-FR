@@ -8,6 +8,7 @@ from django.http import Http404
 
 logger = logging.getLogger(__name__)
 
+
 def index(request):
     """
     Affiche la liste de tous les profils clients.
@@ -34,6 +35,6 @@ def profile(request, username):
     except Profile.DoesNotExist:
         logger.error(f"Profile introuvable pour l'utilisateur: {username}")
         raise Http404("profile non trouvé")
-    
+
     context = {"profile": profile}
     return render(request, "profiles/profile.html", context)

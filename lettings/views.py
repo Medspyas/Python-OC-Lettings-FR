@@ -7,6 +7,7 @@ from django.http import Http404
 
 logger = logging.getLogger(__name__)
 
+
 def index(request):
     """
     Affiche la liste de toutes les locations.
@@ -32,7 +33,7 @@ def letting(request, letting_id):
     except Letting.DoesNotExist:
         logger.error(f"Letting non trouvé pout l'ID : {letting_id}")
         raise Http404("Letting non trouvé")
-    
+
     context = {
         "title": letting.title,
         "address": letting.address,

@@ -9,8 +9,6 @@ urlpatterns = [
     path("lettings/", include("lettings.urls", namespace="lettings")),
     path("profiles/", include("profiles.urls", namespace="profiles")),
     path("admin/", admin.site.urls),
-    path('test500', core_view.test_500),
-    path("sentry-error/", core_view.test_error),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

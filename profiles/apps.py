@@ -8,4 +8,5 @@ class ProfilesConfig(AppConfig):
     Cette configuration permet à Django de reconnaître et initialiser
     l'application lors du démarrage du projet.
     """
+
     name = "profiles"

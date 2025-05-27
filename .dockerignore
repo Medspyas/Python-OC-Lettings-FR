@@ -4,7 +4,6 @@ venv
 .venv
 .pytest_cache
 oc-lettings-site.sqlite3
-.env
 .git
 .gitignore
 .coverage

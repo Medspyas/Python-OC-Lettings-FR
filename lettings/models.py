@@ -2,13 +2,14 @@ from django.core.validators import MaxValueValidator, MinLengthValidator
 from django.db import models
 
 
-class Address(models.Model):    
+class Address(models.Model):
     """
     Représente une adresse postale complète.
 
     Contient les informations nécessaires pour identifier un lieu :
-    numéro, rue, ville, état, code postal du pays.    
+    numéro, rue, ville, état, code postal du pays.
     """
+
     number = models.PositiveIntegerField(validators=[MaxValueValidator(9999)])
     street = models.CharField(max_length=64)
     city = models.CharField(max_length=64)
@@ -17,6 +18,7 @@ class Address(models.Model):
     country_iso_code = models.CharField(
         max_length=3, validators=[MinLengthValidator(3)]
     )
+
     class Meta:
         verbose_name_plural = "Addresses"
 
@@ -34,6 +36,7 @@ class Letting(models.Model):
     Contient un titre descriptif et une relation
     vers une adresse unique associée à cette location.
     """
+
     title = models.CharField(max_length=256)
     address = models.OneToOneField(Address, on_delete=models.CASCADE)
 
