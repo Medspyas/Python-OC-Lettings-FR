@@ -51,9 +51,11 @@ jobs:
           
 
       - name: Docker login
-        run: docker login \
-              -u "$DOCKER_USERNAME" \
-              -p "$DOCKER_PASSWORD"
+        run: |
+          echo "$DOCKER_PASSWORD" \
+            | docker login docker.io \
+              --username "$DOCKER_USERNAME" \
+              --password-stdin
 
       - name: Build Docker 
         run: |
