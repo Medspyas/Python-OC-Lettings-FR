@@ -7,7 +7,7 @@ on:
   pull_request:
     branches : 
       - feature/refactor-apps
-  workflow_dispatch:
+  
 
 jobs:
   test-lint-build:
@@ -51,9 +51,9 @@ jobs:
           
 
       - name: Docker login
-        run: |
-          echo "${{ DOCKER_PASSWORD }}" | \
-            docker login -u "${{ DOCKER_USERNAME }}" --password-stdin
+        run: docker login \
+              -u "$DOCKER_USERNAME" \
+              -p "$DOCKER_PASSWORD"
 
       - name: Build Docker 
         run: |
