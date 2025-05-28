@@ -60,9 +60,8 @@ jobs:
       - name: Build Docker 
         uses: docker/build-push-action@v3
         with:
-        context: .
-        push: True 
-        tags: |
-          ${{ env.DOCKER_USERNAME }}/my-django-app:latest
+          context: .
+          push: true 
+          tags: ${{ env.DOCKER_USERNAME }}/my-django-app:latest
 
       
