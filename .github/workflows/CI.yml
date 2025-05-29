@@ -42,12 +42,7 @@ jobs:
       - name: Run tests with pytest        
         run: |
           echo "Running tests ..."
-          pytest
-
-      - name: Generate static assets
-        run: |
-          echo "Running collectstatic in CI"
-          python manage.py collectstatic --noinput     
+          pytest     
           
 
       - name: Docker login
