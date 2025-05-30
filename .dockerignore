@@ -8,4 +8,4 @@ oc-lettings-site.sqlite3
 .gitignore
 .coverage
 staticfiles/
-
+oc_lettings_site\storage.py
