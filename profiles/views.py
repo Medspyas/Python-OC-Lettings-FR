@@ -1,7 +1,9 @@
-from django.shortcuts import render
 import logging
-from profiles.models import Profile
+
 from django.http import Http404
+from django.shortcuts import render
+
+from profiles.models import Profile
 
 # Create your views here.
 

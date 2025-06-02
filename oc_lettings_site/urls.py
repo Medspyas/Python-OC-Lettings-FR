@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.urls import include, path
+
 from oc_lettings_site import views as core_view
 
 urlpatterns = [

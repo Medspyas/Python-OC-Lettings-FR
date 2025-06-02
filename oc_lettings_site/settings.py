@@ -1,8 +1,8 @@
 import os
-import sentry_sdk
 from pathlib import Path
-from dotenv import load_dotenv
 
+import sentry_sdk
+from dotenv import load_dotenv
 
 load_dotenv()
 

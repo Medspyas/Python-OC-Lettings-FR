@@ -1,7 +1,9 @@
-from django.shortcuts import render
 import logging
-from lettings.models import Letting
+
 from django.http import Http404
+from django.shortcuts import render
+
+from lettings.models import Letting
 
 # Create your views here.
 
