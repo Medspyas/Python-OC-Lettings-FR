@@ -1,11 +1,12 @@
-import os 
+import os
 import sys
-sys.path.insert(0, os.path.abspath('../..'))
-
-os.environ['DJANGO_SETTINGS_MODULE'] = 'oc_lettings_site.settings'
-
-
 import django
+
+sys.path.insert(0, os.path.abspath("../.."))
+
+os.environ["DJANGO_SETTINGS_MODULE"] = "oc_lettings_site.settings"
+
+
 django.setup()
 
 # Configuration file for the Sphinx documentation builder.
@@ -21,19 +22,19 @@ copyright = "2025, mehdi"
 author = "mehdi"
 
 
-
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['sphinx.ext.autodoc',
-              'sphinx.ext.napoleon',
-              ]
+extensions = [
+    "sphinx.ext.autodoc",
+    "sphinx.ext.napoleon",
+]
 
 templates_path = ["_templates"]
 exclude_patterns = []
 
 language = "fr"
-local_dirs = ['locales/']
+local_dirs = ["locales/"]
 gettex_compact = False
 
 # -- Options for HTML output -------------------------------------------------
