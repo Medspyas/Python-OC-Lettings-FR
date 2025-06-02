@@ -3,13 +3,6 @@ import sys
 
 import django
 
-sys.path.insert(0, os.path.abspath("../.."))
-
-os.environ["DJANGO_SETTINGS_MODULE"] = "oc_lettings_site.settings"
-
-
-django.setup()
-
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
@@ -17,6 +10,13 @@ django.setup()
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
+
+sys.path.insert(0, os.path.abspath("../.."))
+
+os.environ["DJANGO_SETTINGS_MODULE"] = "oc_lettings_site.settings"
+
+
+django.setup()
 
 project = "oc-lettings"
 copyright = "2025, mehdi"
