@@ -13,7 +13,7 @@ import django
 
 sys.path.insert(0, os.path.abspath("../.."))
 
-os.environ["DJANGO_SETTINGS_MODULE"] = "oc_lettings_site.settings"
+os.environ["DJANGO_SETTINGS_MODULE"] = "docs.source.doc_settings"
 
 
 django.setup()
