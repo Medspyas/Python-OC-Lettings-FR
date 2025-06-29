@@ -60,7 +60,6 @@ jobs:
           tags: ${{ secrets.DOCKER_USERNAME }}/my-django-app:latest
 
       - name: Trigger Render Deploy Hook
-        run: |
-          curl -X POST ${{secrets.RENDER_DEPLOY_HOOK}}
+        run: curl -X POST ${{secrets.RENDER_DEPLOY_HOOK}}
 
       
