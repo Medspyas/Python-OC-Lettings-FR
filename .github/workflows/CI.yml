@@ -3,10 +3,10 @@ name: CI pipeline
 on:
   push:
     branches : 
-      - feature/refactor-apps
+      - master
   pull_request:
     branches : 
-      - feature/refactor-apps
+      - master
   
 
 jobs:
