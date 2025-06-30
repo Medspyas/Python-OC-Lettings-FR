@@ -2,16 +2,20 @@ import os
 from pathlib import Path
 
 import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
 from dotenv import load_dotenv
 
 load_dotenv()
 
+print("SENTRY_DSN:", os.getenv("SENTRY_DSN"))
 
 sentry_sdk.init(
     dsn=os.getenv("SENTRY_DSN"),
+    integrations=[DjangoIntegration()],
     # Add data like request headers and IP for users,
     # see https://docs.sentry.io/platforms/python/data-management/data-collected/ for more info
     send_default_pii=True,
+    traces_sample_rate=1.0,
 )
 
 

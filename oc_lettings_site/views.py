@@ -7,4 +7,5 @@ def index(request):
 
     Rend le template 'index.html' sans contexte particulier.
     """
+
     return render(request, "index.html")
