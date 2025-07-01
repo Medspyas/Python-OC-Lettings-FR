@@ -9,3 +9,7 @@ def index(request):
     """
 
     return render(request, "index.html")
+
+
+def trigger_error(request):
+    1/0
