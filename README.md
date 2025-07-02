@@ -82,7 +82,7 @@ Le projet utilise un fichier `.env` pour centraliser les variables d'environneme
 Créez un fichier `.env` à la racine du projet avec comme variable:
   - SECRET_KEY
   - SENTRY_DSN
-  - SECRET_DEPLOY_HOOK
+  
 
 Ne pas commit ce fichier dans Git, il doit être listé dans le `.gitignore`
 
@@ -107,7 +107,7 @@ Il execute automatiquement les étapes suivantes:
 - Tests unitaires avec `pytest`
 - Build Docker
 - Push vers Docker Hub
-- Génération de la documentation
+
 
 
 ### Documentation 
